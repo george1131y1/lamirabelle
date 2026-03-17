@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { 
-  Building2, 
-  TrendingUp, 
-  Target, 
-  MapPin, 
-  Waves, 
-  Train, 
-  ShoppingBag, 
+import {
+  Building2,
+  TrendingUp,
+  Target,
+  MapPin,
+  Waves,
+  Train,
+  ShoppingBag,
   GraduationCap,
   ChevronRight,
   CheckCircle2,
@@ -15,16 +15,16 @@ import {
   AlertTriangle,
   Info
 } from 'lucide-react';
-import { 
-  UnitMixChart, 
+import {
+  UnitMixChart,
   SeaViewIndicator,
-  HistoricalPriceChart, 
-  RegionalComparisonChart, 
-  ScoreRadarChart 
+  HistoricalPriceChart,
+  RegionalComparisonChart,
+  ScoreRadarChart
 } from './components/Charts';
 
 const Section = ({ children, className = "" }: { children: React.ReactNode, className?: string }) => (
-  <motion.section 
+  <motion.section
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
@@ -59,21 +59,21 @@ export default function App() {
       {/* Hero Section */}
       <header className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="/images/hero.png" 
-            alt="海瑅灣 La Mirabelle" 
+          <img
+            src="./images/hero.png"
+            alt="海瑅灣 La Mirabelle"
             className="w-full h-full object-cover scale-105"
           />
           <div className="absolute inset-0 bg-black/30 backdrop-blur-[2px]" />
         </div>
-        
+
         <div className="relative z-10 text-center text-white px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <h1 className="text-5xl md:text-7xl font-serif mb-4 tracking-widest uppercase">海 堤 灣 I</h1>
+            <h1 className="text-5xl md:text-7xl mb-4 tracking-widest uppercase" style={{ fontFamily: "'Cactus Classical Serif', serif" }}>海 瑅 灣 I</h1>
             <p className="text-xl md:text-2xl font-light tracking-[0.3em] mb-12">LA MIRABELLE I</p>
             <div className="inline-block px-8 py-3 border border-white/30 backdrop-blur-md rounded-full text-sm tracking-[0.2em] uppercase">
               投資與置業分析報告
@@ -81,7 +81,7 @@ export default function App() {
           </motion.div>
         </div>
 
-        <motion.div 
+        <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 2 }}
           className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50"
@@ -97,9 +97,9 @@ export default function App() {
           <h2 className="section-title">掌握海堤灣核心價值</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <Card 
-            title="地標屬性" 
-            subtitle="(The Asset)" 
+          <Card
+            title="地標屬性"
+            subtitle="(The Asset)"
             icon={Building2}
             items={[
               "5大星級發展商聯手 (信和、嘉里等)",
@@ -107,9 +107,9 @@ export default function App() {
               "直達港島東無遮擋海景"
             ]}
           />
-          <Card 
-            title="價格定位" 
-            subtitle="(The Value)" 
+          <Card
+            title="價格定位"
+            subtitle="(The Value)"
             icon={TrendingUp}
             color="gold"
             items={[
@@ -118,9 +118,9 @@ export default function App() {
               "相比啟德或黃竹坑具備 15%-90% 折讓空間"
             ]}
           />
-          <Card 
-            title="最終建議" 
-            subtitle="(The Action)" 
+          <Card
+            title="最終建議"
+            subtitle="(The Action)"
             icon={Target}
             items={[
               "極度適合「臨海自住客」與「鐵路通勤族」",
@@ -158,7 +158,7 @@ export default function App() {
             <div className="relative">
               <div className="aspect-square rounded-full border border-white/10 flex items-center justify-center p-12">
                 <div className="w-full h-full rounded-full border border-luxury-gold/30 flex items-center justify-center relative">
-                  <motion.div 
+                  <motion.div
                     animate={{ rotate: 360 }}
                     transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                     className="absolute inset-0 border-t-2 border-luxury-gold rounded-full"
@@ -347,19 +347,19 @@ export default function App() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {[
-            { src: "/images/grandentrance.png", title: "尊貴入口 (Grand Entrance)" },
-            { src: "/images/mirabellevilla.png", title: "海瑅盛聚廳 (Mirabelle Villa)" },
-            { src: "/images/oceangym.png", title: "臨海健身室 (Ocean Gym)" },
-            { src: "/images/infinitypool.png", title: "無邊際泳池 (Infinity Pool)" },
+            { src: "./images/grandentrance.png", title: "尊貴入口 (Grand Entrance)" },
+            { src: "./images/mirabellevilla.png", title: "海瑅盛聚廳 (Mirabelle Villa)" },
+            { src: "./images/oceangym.png", title: "臨海健身室 (Ocean Gym)" },
+            { src: "./images/infinitypool.png", title: "無邊際泳池 (Infinity Pool)" },
           ].map((img, i) => (
-            <motion.div 
+            <motion.div
               key={i}
               whileHover={{ scale: 1.02 }}
               className="group relative aspect-[4/3] overflow-hidden rounded-2xl shadow-lg"
             >
-              <img 
-                src={img.src} 
-                alt={img.title} 
+              <img
+                src={img.src}
+                alt={img.title}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 referrerPolicy="no-referrer"
               />

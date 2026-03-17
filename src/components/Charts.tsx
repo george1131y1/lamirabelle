@@ -16,9 +16,9 @@ const COLORS = {
 export const UnitMixChart = () => {
   return (
     <div className="flex flex-col items-center w-full">
-      <svg viewBox="0 0 800 600" className="w-full h-auto max-h-[500px]" preserveAspectRatio="xMidYMid meet">
+      <svg viewBox="0 0 800 650" className="w-full h-auto max-h-[550px]" preserveAspectRatio="xMidYMid meet">
         {/* 背景 */}
-        <rect width="800" height="600" rx="24" fill={COLORS.cream}/>
+        <rect width="800" height="650" rx="24" fill={COLORS.cream}/>
 
         {/* 連接線 - 調整位置 */}
         <line x1="537.86" y1="288.99" x2="627.36" y2="288.99" stroke="#9CA3AF" strokeWidth="2"/>
@@ -57,11 +57,11 @@ export const UnitMixChart = () => {
         </text>
 
         {/* 4房標籤 - 向下移動避免被切掉 */}
-        <text x="324.55" y="35" fill="#374151" fontSize="28.8">
+        <text x="324.55" y="60" fill="#374151" fontSize="28.8">
           <tspan fontFamily="Roboto-Medium, Roboto" fontWeight="500">4</tspan>
           <tspan fontFamily="system-ui, -apple-system, sans-serif" fontWeight="300">房</tspan>
         </text>
-        <text x="283.32" y="5" fill="#6B7280" fontSize="24">
+        <text x="283.32" y="30" fill="#6B7280" fontSize="24">
           <tspan fontFamily="SegoeUI, 'Segoe UI'">10%, 250</tspan>
           <tspan fontFamily="system-ui, -apple-system, sans-serif" fontWeight="300">伙</tspan>
         </text>
@@ -134,9 +134,9 @@ export const SeaViewIndicator = () => {
 export const HistoricalPriceChart = () => {
   return (
     <div className="flex flex-col items-center w-full">
-      <svg viewBox="0 0 1000 500" className="w-full h-auto" preserveAspectRatio="xMidYMid meet">
+      <svg viewBox="0 0 1000 530" className="w-full h-auto" preserveAspectRatio="xMidYMid meet">
         {/* 背景 */}
-        <rect width="1000" height="500" rx="24" fill={COLORS.cream}/>
+        <rect width="1000" height="530" rx="24" fill={COLORS.cream}/>
 
         {/* 標題 */}
         <text x="500" y="50" textAnchor="middle" fill="#1F2937" fontSize="28" fontWeight="700" fontFamily="system-ui, sans-serif">
@@ -198,7 +198,7 @@ export const HistoricalPriceChart = () => {
         <text x="755" y="480" textAnchor="middle" fill="#6B7280" fontSize="14">海瑅灣</text>
 
         {/* 註解 */}
-        <text x="500" y="510" textAnchor="middle" fill="#6B7280" fontSize="14">
+        <text x="500" y="520" textAnchor="middle" fill="#6B7280" fontSize="14">
           (註：數據為近期二手成交參考)
         </text>
       </svg>
