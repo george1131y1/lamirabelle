@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 598">
+  <rect width="800" height="598" rx="24" fill="#F9F7F4"/>
+  
+  <!-- 外框 -->
+  <rect x="82.92" y="103.96" width="647.57" height="115.5" rx="16.95" fill="#FFFFFF" stroke="#D4A853" stroke-width="3"/>
+  
+  <!-- >60% 文字 -->
+  <text x="303.54" y="349.52" fill="#1F2937" font-size="69.91" font-weight="700" font-family="SegoeUI-Bold, 'Segoe UI'">&gt; 60%</text>
+  
+  <!-- 進度條背景 -->
+  <path fill="#E5E7EB" 
+    d="M180.66,378.65h452.09c9.65,0,17.48,7.83,17.48,17.48h0c0,9.65-7.83,17.48-17.48,17.48H180.66c-9.65,0-17.48-7.83-17.48-17.48h0c0-9.65,7.83-17.48,17.48-17.48Z"/>
+  
+  <!-- 進度條填充 (60%) -->
+  <path fill="url(#blueGrad)"
+    d="M180.66,378.65h268.55c9.65,0,17.48,7.83,17.48,17.48h0c0,9.65-7.83,17.48-17.48,17.48H180.66c-9.65,0-17.48-7.83-17.48-17.48h0c0-9.65,7.83-17.48,17.48-17.48Z"/>
+  
+  <!-- 60% 標記線 -->
+  <rect x="452.13" y="364.08" width="5.83" height="64.09" fill="#0A2540"/>
+  
+  <!-- 漸層定義 -->
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1A3A5C"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+</svg>

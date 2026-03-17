@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 891.55 725.82">
+  <rect width="891.55" height="725.82" rx="26.98" fill="#F9F7F4"/>
+  
+  <!-- 標題區域 -->
+  <g transform="translate(74.94, 154.02)">
+    <rect width="716.61" height="81.8" rx="11.31" fill="#FFFFFF" stroke="#0A2540" stroke-width="3"/>
+  </g>
+  
+  <!-- Y軸標籤 -->
+  <text x="37.14" y="318.96" fill="#6B7280" font-size="34.06" font-weight="700" font-family="SegoeUI-Bold, 'Segoe UI'">$18k</text>
+  <text x="37.14" y="413.58" fill="#6B7280" font-size="34.06" font-weight="700" font-family="SegoeUI-Bold, 'Segoe UI'">$16k</text>
+  <text x="37.14" y="508.2" fill="#6B7280" font-size="34.06" font-weight="700" font-family="SegoeUI-Bold, 'Segoe UI'">$14k</text>
+  <text x="37.14" y="586.22" fill="#6B7280" font-size="34.06" font-weight="700" font-family="SegoeUI-Bold, 'Segoe UI'">$12k</text>
+  
+  <!-- 網格線 -->
+  <line x1="96.07" y1="309.49" x2="853.06" y2="309.49" stroke="#E5E7EB" stroke-width="2"/>
+  <line x1="96.07" y1="404.12" x2="853.06" y2="404.12" stroke="#E5E7EB" stroke-width="2"/>
+  <line x1="96.07" y1="498.74" x2="853.06" y2="498.74" stroke="#E5E7EB" stroke-width="2"/>
+  <line x1="96.07" y1="576.76" x2="853.06" y2="576.76" stroke="#E5E7EB" stroke-width="2"/>
+  <line x1="96.07" y1="593.36" x2="853.06" y2="593.36" stroke="#E5E7EB" stroke-width="2"/>
+  
+  <!-- 1期 首都 - $12k -->
+  <text x="160.29" y="565.36" fill="#374151" font-size="22.71" font-weight="600" font-family="SegoeUI-Semibold, 'Segoe UI'">$12k</text>
+  <text x="165.03" y="628.27" fill="#374151" font-size="20.82">
+    <tspan font-family="Roboto-Medium, Roboto" font-weight="500">1</tspan>
+    <tspan font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">期</tspan>
+  </text>
+  <text x="163.34" y="656.66" fill="#6B7280" font-size="18.92" font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">首都</text>
+  <rect x="140.88" y="576.76" width="85.16" height="16.61" fill="#9CA3AF"/>
+  
+  <!-- 3期 緻藍天 - $13k -->
+  <text x="275.43" y="527.13" fill="#374151" font-size="22.71" font-weight="600" font-family="SegoeUI-Semibold, 'Segoe UI'">$13k</text>
+  <text x="288.04" y="628.27" fill="#374151" font-size="20.82">
+    <tspan font-family="Roboto-Medium, Roboto" font-weight="500">3</tspan>
+    <tspan font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">期</tspan>
+  </text>
+  <text x="280.24" y="656.66" fill="#6B7280" font-size="18.92" font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">緻藍天</text>
+  <rect x="256.93" y="546.05" width="85.16" height="47.31" fill="#9CA3AF"/>
+  
+  <!-- 4期 晉海 - $14k -->
+  <text x="398.2" y="479.82" fill="#374151" font-size="22.71" font-weight="600" font-family="SegoeUI-Semibold, 'Segoe UI'">$14k</text>
+  <text x="411.05" y="628.27" fill="#374151" font-size="20.82">
+    <tspan font-family="Roboto-Medium, Roboto" font-weight="500">4</tspan>
+    <tspan font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">期</tspan>
+  </text>
+  <text x="409.36" y="656.66" fill="#6B7280" font-size="18.92" font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">晉海</text>
+  <rect x="379.94" y="498.74" width="85.16" height="94.62" fill="#9CA3AF"/>
+  
+  <!-- 6期 LP6 - $15k -->
+  <text x="521.45" y="432.5" fill="#374151" font-size="22.71" font-weight="600" font-family="SegoeUI-Semibold, 'Segoe UI'">$15k</text>
+  <text x="534.06" y="628.27" fill="#374151" font-size="20.82">
+    <tspan font-family="Roboto-Medium, Roboto" font-weight="500">6</tspan>
+    <tspan font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">期</tspan>
+  </text>
+  <text x="529.74" y="656.66" fill="#6B7280" font-size="18.92" font-family="SegoeUI, 'Segoe UI'">LP6</text>
+  <rect x="502.96" y="451.43" width="85.16" height="141.94" fill="#9CA3AF"/>
+  
+  <!-- 9期 MARINI - $16.5k -->
+  <text x="635.39" y="360.59" fill="#374151" font-size="22.71" font-weight="600" font-family="SegoeUI-Semibold, 'Segoe UI'">$16.5k</text>
+  <text x="657.07" y="628.27" fill="#374151" font-size="20.82">
+    <tspan font-family="Roboto-Medium, Roboto" font-weight="500">9</tspan>
+    <tspan font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300" letter-spacing="0">期</tspan>
+  </text>
+  <text x="635.23" y="656.66" fill="#6B7280" font-size="18.92" font-family="SegoeUI, 'Segoe UI'">MARINI</text>
+  <rect x="625.97" y="380.46" width="85.16" height="212.9" fill="#9CA3AF"/>
+  
+  <!-- 13期 海瑅灣 - $17k (目標 - Navy) -->
+  <text x="751.7" y="337.88" fill="#0A2540" font-size="34.06" font-weight="700" font-family="SegoeUI-Bold, 'Segoe UI'">$17k</text>
+  <text x="774.17" y="628.27" fill="#374151" font-size="20.82">
+    <tspan font-family="Roboto-Medium, Roboto" font-weight="500">13</tspan>
+    <tspan font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">期</tspan>
+  </text>
+  <text x="772.29" y="656.66" fill="#6B7280" font-size="18.92" font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">海瑅灣</text>
+  <rect x="748.98" y="356.81" width="85.16" height="236.56" fill="#0A2540"/>
+  
+  <!-- 註解 -->
+  <text x="305.31" y="283.67" fill="#6B7280" font-size="18.92">
+    <tspan font-family="SegoeUI, 'Segoe UI'">(</tspan>
+    <tspan font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">註：數據為近期二手成交參考</tspan>
+    <tspan font-family="SegoeUI, 'Segoe UI'">)</tspan>
+  </text>
+  
+  <!-- 說明文字 -->
+  <text x="134.08" y="188.76" fill="#374151" font-size="20.82" font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">
+    <tspan x="0" y="0">從首期至今經歷巨大蛻變。第</tspan>
+    <tspan font-family="SegoeUI, 'Segoe UI'">13</tspan>
+    <tspan x="270.63" y="0">期作為康城站臨海最後一塊拼圖，</tspan>
+    <tspan x="84.09" y="24.98">其</tspan>
+    <tspan font-family="SegoeUI, 'Segoe UI'" xml:space="preserve"> $17,000 </tspan>
+    <tspan x="188.16" y="24.98">的預估準奠定了該區的價值天花板。</tspan>
+  </text>
+</svg>

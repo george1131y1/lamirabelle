@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 890.98 725.81">
+  <rect width="890.98" height="725.81" rx="26.98" fill="#F9F7F4"/>
+  
+  <!-- Baseline 標記 -->
+  <text x="426.71" y="133.88" fill="#6B7280" font-size="18.92" font-family="SegoeUI, 'Segoe UI'">Baseline</text>
+  
+  <!-- Baseline 虛線 -->
+  <line x1="460.79" y1="149.02" x2="460.79" y2="608.85" stroke="#0A2540" stroke-width="3" stroke-dasharray="10 6"/>
+  
+  <!-- 基準價格標籤 -->
+  <text x="699" y="225.67" fill="#0A2540" font-size="30.47" font-family="SegoeUI-Semibold, 'Segoe UI'" font-weight="600">
+    <tspan>$17.0k/</tspan>
+    <tspan font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">呎</tspan>
+  </text>
+  
+  <!-- 基準價格條 -->
+  <rect x="247.44" y="186.86" width="208.02" height="66.22" rx="7.57" fill="url(#navyGrad)"/>
+  
+  <!-- 基準說明 -->
+  <text x="118.16" y="243.63" fill="#6B7280" font-size="18.92">
+    <tspan font-family="SegoeUI, 'Segoe UI'">(</tspan>
+    <tspan font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">臨海</tspan>
+    <tspan font-family="SegoeUI, 'Segoe UI'">+</tspan>
+    <tspan font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">鐵路</tspan>
+    <tspan font-family="SegoeUI, 'Segoe UI'">)</tspan>
+  </text>
+  
+  <!-- 黃竹坑 -->
+  <text x="92.07" y="328.77" fill="#374151" font-size="20.81" font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">黃竹坑鐵路盤</text>
+  <text x="28.28" y="357.15" fill="#6B7280" font-size="18.92">
+    <tspan font-family="SegoeUI, 'Segoe UI'">(</tspan>
+    <tspan font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">晉環</tspan>
+    <tspan font-family="SegoeUI, 'Segoe UI'">/</tspan>
+    <tspan font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">揚海</tspan>
+    <tspan font-family="SegoeUI, 'Segoe UI'">/Blue Coast)</tspan>
+  </text>
+  
+  <rect x="248.39" y="300.39" width="286.01" height="66.22" rx="7.57" fill="#D1D5DB"/>
+  
+  <text x="697.4" y="332.03" fill="#374151" font-size="22.71" font-weight="600" font-family="SegoeUI-Semibold, 'Segoe UI'">$19.5k - $21.0k</text>
+  <text x="699" y="356.63" fill="#6B7280" font-size="18.92">
+    <tspan font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">溢價</tspan>
+    <tspan font-family="SegoeUI, 'Segoe UI'" xml:space="preserve"> 15-25%</tspan>
+  </text>
+  
+  <!-- 何文田 -->
+  <text x="98.78" y="442.3" fill="#374151" font-size="20.81" font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">何文田鐵路盤</text>
+  <text x="111.52" y="470.68" fill="#6B7280" font-size="18.92">
+    <tspan font-family="SegoeUI, 'Segoe UI'">(</tspan>
+    <tspan font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">朗賢峯</tspan>
+    <tspan font-family="SegoeUI, 'Segoe UI'">/</tspan>
+    <tspan font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">瑜一</tspan>
+    <tspan font-family="SegoeUI, 'Segoe UI'">)</tspan>
+  </text>
+  
+  <rect x="247.44" y="413.92" width="349.63" height="66.22" rx="7.57" fill="#D1D5DB"/>
+  
+  <text x="700.27" y="443.24" fill="#374151" font-size="22.71" font-weight="600" font-family="SegoeUI-Semibold, 'Segoe UI'">$23.0k - $25.0k</text>
+  <text x="699" y="467.84" fill="#6B7280" font-size="18.92">
+    <tspan font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">溢價</tspan>
+    <tspan font-family="SegoeUI, 'Segoe UI'" xml:space="preserve"> 35-45%</tspan>
+  </text>
+  
+  <!-- 啟德 -->
+  <text x="112.81" y="555.83" fill="#374151" font-size="20.81" font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">啟德臨海盤</text>
+  <text x="20.77" y="584.21" fill="#6B7280" font-size="18.92">
+    <tspan font-family="SegoeUI, 'Segoe UI'">(</tspan>
+    <tspan font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">維港</tspan>
+    <tspan font-family="SegoeUI, 'Segoe UI'">1</tspan>
+    <tspan font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">號</tspan>
+    <tspan font-family="SegoeUI, 'Segoe UI'">/</tspan>
+    <tspan font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">澐璟</tspan>
+    <tspan font-family="SegoeUI, 'Segoe UI'">/</tspan>
+    <tspan font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">天璽</tspan>
+    <tspan font-family="SegoeUI, 'Segoe UI'">·</tspan>
+    <tspan font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">海</tspan>
+    <tspan font-family="SegoeUI, 'Segoe UI'" letter-spacing="0">)</tspan>
+  </text>
+  
+  <rect x="248.39" y="527.44" width="438.19" height="66.22" rx="7.57" fill="#D1D5DB"/>
+  
+  <text x="701.47" y="555.9" fill="#374151" font-size="22.71" font-weight="600" font-family="SegoeUI-Semibold, 'Segoe UI'">$22.0k - $32.0k</text>
+  <text x="703.06" y="580.5" fill="#DC2626" font-size="18.92">
+    <tspan font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">溢價</tspan>
+    <tspan font-family="SegoeUI, 'Segoe UI'" xml:space="preserve"> 30-90%</tspan>
+  </text>
+  
+  <!-- 底部說明框 -->
+  <rect x="63.47" y="627.62" width="756.84" height="75.68" rx="11.35" fill="#FFFFFF" stroke="#0A2540" stroke-width="3"/>
+  
+  <!-- 漸層定義 -->
+  <defs>
+    <linearGradient id="navyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0A2540"/>
+      <stop offset="100%" stop-color="#1E40AF"/>
+    </linearGradient>
+  </defs>
+</svg>

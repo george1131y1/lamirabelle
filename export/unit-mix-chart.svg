@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="800" height="640">
+  <defs>
+    <style>
+      .title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 16px; font-weight: 700; fill: #1F2937; }
+      .label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12px; font-weight: 500; fill: #374151; }
+      .sublabel { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 10px; fill: #6B7280; }
+      .percentage { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 24px; font-weight: 700; fill: #1F2937; }
+      .bg-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11px; fill: #374151; }
+    </style>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1A3A5C"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="400" height="320" fill="#F9F7F4" rx="12"/>
+  
+  <!-- 標題 -->
+  <text x="200" y="28" text-anchor="middle" class="title">鎖定換屋族群的戶型與景觀分佈</text>
+  
+  <!-- 甜甜圈圖中心點 -->
+  <g transform="translate(130, 165)">
+    <!-- 2房 47% -->
+    <path d="M 0,-85 A 85,85 0 1,1 -58.7,61.5 L -38,39.7 A 55,55 0 1,0 0,-55 Z" fill="#0A2540" stroke="#FFFFFF" stroke-width="2"/>
+    
+    <!-- 3房 27% -->
+    <path d="M -58.7,61.5 A 85,85 0 0,1 -79.3,-27.5 L -51.3,-17.8 A 55,55 0 0,0 -38,39.7 Z" fill="#D4A853" stroke="#FFFFFF" stroke-width="2"/>
+    
+    <!-- 1房 16% -->
+    <path d="M -79.3,-27.5 A 85,85 0 0,1 -27.5,-79.3 L -17.8,-51.3 A 55,55 0 0,0 -51.3,-17.8 Z" fill="#1A3D67" stroke="#FFFFFF" stroke-width="2"/>
+    
+    <!-- 4房 10% -->
+    <path d="M -27.5,-79.3 A 85,85 0 0,1 0,-85 L 0,-55 A 55,55 0 0,0 -17.8,-51.3 Z" fill="#E8C87A" stroke="#FFFFFF" stroke-width="2"/>
+    
+    <!-- 中心文字 -->
+    <text x="0" y="-5" text-anchor="middle" class="percentage">2,550</text>
+    <text x="0" y="15" text-anchor="middle" class="sublabel">總伙數</text>
+  </g>
+  
+  <!-- 2房標註 -->
+  <line x1="195" y1="165" x2="240" y2="165" stroke="#9CA3AF" stroke-width="1"/>
+  <text x="248" y="160" class="label">2房</text>
+  <text x="248" y="175" class="sublabel">47%, 1200伙</text>
+  
+  <!-- 3房標註 -->
+  <line x1="75" y1="220" x2="40" y2="245" stroke="#9CA3AF" stroke-width="1"/>
+  <text x="10" y="255" class="label">3房</text>
+  <text x="10" y="268" class="sublabel">27%, 700伙</text>
+  
+  <!-- 1房標註 -->
+  <line x1="55" y1="120" x2="25" y2="95" stroke="#9CA3AF" stroke-width="1"/>
+  <text x="5" y="88" class="label">1房</text>
+  <text x="5" y="75" class="sublabel">16%, 400伙</text>
+  
+  <!-- 4房標註 -->
+  <line x1="105" y1="85" x2="105" y2="55" stroke="#9CA3AF" stroke-width="1"/>
+  <text x="105" y="45" text-anchor="middle" class="label">4房</text>
+  <text x="105" y="32" text-anchor="middle" class="sublabel">10%, 250伙</text>
+  
+  <!-- 說明框 -->
+  <rect x="260" y="100" width="125" height="75" rx="6" fill="#FFFFFF" stroke="#D4A853" stroke-width="1.5"/>
+  <text x="270" y="122" class="bg-text">高度集中於2至3房</text>
+  <text x="270" y="138" class="bg-text">(共佔74%)，確立本期</text>
+  <text x="270" y="154" class="bg-text">主打「家庭客」與「換</text>
+  <text x="270" y="170" class="bg-text">樓客」的穩健居住屬性。</text>
+  
+  <!-- 海景單位指示器 -->
+  <text x="322" y="220" text-anchor="middle" class="percentage">&gt; 60%</text>
+  <rect x="267" y="230" width="110" height="12" rx="6" fill="#E5E7EB"/>
+  <rect x="267" y="230" width="75" height="12" rx="6" fill="url(#blueGrad)"/>
+  <rect x="337" y="225" width="2" height="22" fill="#0A2540"/>
+  <text x="322" y="270" text-anchor="middle" class="bg-text">逾60%單位享有將軍澳海灣及</text>
+  <text x="322" y="285" text-anchor="middle" class="bg-text">港島東開揚景致。</text>
+</svg>

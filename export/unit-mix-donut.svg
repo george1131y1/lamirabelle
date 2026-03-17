@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 598">
+  <rect width="800" height="598" rx="24" fill="#F9F7F4"/>
+  
+  <!-- 連接線 -->
+  <line x1="537.86" y1="368.99" x2="627.36" y2="368.99" stroke="#9CA3AF" stroke-width="2"/>
+  <line x1="258.58" y1="420.57" x2="205.31" y2="458.62" stroke="#9CA3AF" stroke-width="2"/>
+  <line x1="467.66" y1="206.84" x2="507.07" y2="159.54" stroke="#9CA3AF" stroke-width="2"/>
+  <line x1="342.77" y1="154.65" x2="342.77" y2="124.22" stroke="#9CA3AF" stroke-width="2"/>
+  
+  <!-- 2房標籤 -->
+  <text x="626.23" y="357" fill="#374151" font-size="28.8">
+    <tspan font-family="Roboto-Medium, Roboto" font-weight="500">2</tspan>
+    <tspan font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">房</tspan>
+  </text>
+  <text x="626.23" y="393" fill="#6B7280" font-size="24">
+    <tspan font-family="SegoeUI, 'Segoe UI'">47%, 1200</tspan>
+    <tspan font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">伙</tspan>
+  </text>
+  
+  <!-- 3房標籤 -->
+  <text x="126.79" y="486.52" fill="#374151" font-size="28.8">
+    <tspan font-family="Roboto-Medium, Roboto" font-weight="500">3</tspan>
+    <tspan font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">房</tspan>
+  </text>
+  <text x="126.79" y="517.72" fill="#6B7280" font-size="24">
+    <tspan font-family="SegoeUI, 'Segoe UI'">27%, 700</tspan>
+    <tspan font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">伙</tspan>
+  </text>
+  
+  <!-- 1房標籤 -->
+  <text x="507.58" y="151.56" fill="#374151" font-size="28.8">
+    <tspan font-family="Roboto-Medium, Roboto" font-weight="500">1</tspan>
+    <tspan font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">房</tspan>
+  </text>
+  <text x="487.37" y="120.36" fill="#6B7280" font-size="24">
+    <tspan font-family="SegoeUI, 'Segoe UI'">16%, 400</tspan>
+    <tspan font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">伙</tspan>
+  </text>
+  
+  <!-- 4房標籤 -->
+  <text x="324.55" y="109.34" fill="#374151" font-size="28.8">
+    <tspan font-family="Roboto-Medium, Roboto" font-weight="500">4</tspan>
+    <tspan font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">房</tspan>
+  </text>
+  <text x="283.32" y="78.14" fill="#6B7280" font-size="24">
+    <tspan font-family="SegoeUI, 'Segoe UI'">10%, 250</tspan>
+    <tspan font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">伙</tspan>
+  </text>
+  
+  <!-- 甜甜圈圖 - 2房 (Gold) -->
+  <path fill="#D4A853" stroke="#FFFFFF" stroke-width="4" 
+    d="M392.49,342.79l-92.06-173.13c29.36-15.61,58.81-22.95,92.06-22.95v196.09Z"/>
+  
+  <!-- 甜甜圈圖 - 3房 (Navy) -->
+  <path fill="#0A2540" stroke="#FFFFFF" stroke-width="4"
+    d="M392.49,342.79l10.26,195.82c-108.15,5.67-200.41-77.41-206.08-185.56-4.1-78.19,34.63-146.64,103.76-183.4l92.06,173.13Z"/>
+  
+  <!-- 甜甜圈圖 - 1房 (Gold) -->
+  <path fill="#D4A853" stroke="#FFFFFF" stroke-width="4"
+    d="M392.49,342.79l136.21-141.05c77.9,75.23,80.07,199.37,4.84,277.27-35.81,37.08-79.31,56.91-130.79,59.6l-10.26-195.82Z"/>
+  
+  <!-- 甜甜圈圖 - 4房 (Navy) -->
+  <path fill="#0A2540" stroke="#FFFFFF" stroke-width="4"
+    d="M392.49,342.79v-196.09c53.28,0,97.89,18.02,136.21,55.03l-136.21,141.05Z"/>
+  
+  <!-- 中心圓 -->
+  <circle cx="394.46" cy="342.96" r="125.58" fill="#F9F7F4"/>
+  
+  <!-- 總伙數 -->
+  <text x="318.41" y="348.96" fill="#1F2937" font-size="57.6" font-weight="700" font-family="SegoeUI-Bold, 'Segoe UI'">2,550</text>
+  <text x="357.35" y="385.69" fill="#6B7280" font-size="24" font-family="AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std'" font-weight="300">總伙數</text>
+</svg>

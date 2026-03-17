@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 280" width="600" height="560">
+  <defs>
+    <style>
+      .score { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 48px; font-weight: 700; fill: #0A2540; }
+      .score-label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 10px; fill: #9CA3AF; text-transform: uppercase; letter-spacing: 1px; }
+      .axis-label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11px; fill: #4B5563; }
+      .desc { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 10px; fill: #6B7280; }
+    </style>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="300" height="280" fill="#FFFFFF" rx="12"/>
+  
+  <!-- 雷達圖 -->
+  <g transform="translate(150, 130)">
+    <!-- 背景網格 -->
+    <polygon points="0,-90 85.4,-27.8 52.9,72.8 -52.9,72.8 -85.4,-27.8" fill="none" stroke="#E5E7EB" stroke-width="1"/>
+    <polygon points="0,-72 68.3,-22.2 42.3,58.2 -42.3,58.2 -68.3,-22.2" fill="none" stroke="#E5E7EB" stroke-width="1"/>
+    <polygon points="0,-54 51.2,-16.7 31.7,43.7 -31.7,43.7 -51.2,-16.7" fill="none" stroke="#E5E7EB" stroke-width="1"/>
+    <polygon points="0,-36 34.2,-11.1 21.2,29.1 -21.2,29.1 -34.2,-11.1" fill="none" stroke="#E5E7EB" stroke-width="1"/>
+    <polygon points="0,-18 17.1,-5.6 10.6,14.6 -10.6,14.6 -17.1,-5.6" fill="none" stroke="#E5E7EB" stroke-width="1"/>
+    
+    <!-- 軸線 -->
+    <line x1="0" y1="0" x2="0" y2="-90" stroke="#E5E7EB" stroke-width="1"/>
+    <line x1="0" y1="0" x2="85.4" y2="-27.8" stroke="#E5E7EB" stroke-width="1"/>
+    <line x1="0" y1="0" x2="52.9" y2="72.8" stroke="#E5E7EB" stroke-width="1"/>
+    <line x1="0" y1="0" x2="-52.9" y2="72.8" stroke="#E5E7EB" stroke-width="1"/>
+    <line x1="0" y1="0" x2="-85.4" y2="-27.8" stroke="#E5E7EB" stroke-width="1"/>
+    
+    <!-- 數據區域 (8/10 = 0.8, 9/10 = 0.9) -->
+    <polygon points="0,-81 76.9,-25 -42.3,58.2 -42.3,58.2 -76.9,-25" fill="#D4A853" fill-opacity="0.3" stroke="#D4A853" stroke-width="2"/>
+    
+    <!-- 數據點 -->
+    <circle cx="0" cy="-81" r="4" fill="#D4A853"/>
+    <circle cx="76.9" cy="-25" r="4" fill="#D4A853"/>
+    <circle cx="47.6" cy="65.5" r="4" fill="#D4A853"/>
+    <circle cx="-47.6" cy="65.5" r="4" fill="#D4A853"/>
+    <circle cx="-76.9" cy="-25" r="4" fill="#D4A853"/>
+    
+    <!-- 中心分數 -->
+    <text x="0" y="5" text-anchor="middle" class="score">8</text>
+    <text x="0" y="25" text-anchor="middle" class="score-label">Overall Score</text>
+  </g>
+  
+  <!-- 標籤 -->
+  <text x="150" y="25" text-anchor="middle" class="axis-label">環境 (9/10)</text>
+  <text x="265" y="95" text-anchor="start" class="axis-label">交通 (8/10)</text>
+  <text x="230" y="245" text-anchor="start" class="axis-label">商業配套 (8/10)</text>
+  <text x="70" y="245" text-anchor="end" class="axis-label">校網 (7/10)</text>
+  <text x="35" y="95" text-anchor="end" class="axis-label">升值潛力 (7/10)</text>
+  
+  <!-- 描述 -->
+  <text x="150" y="265" text-anchor="middle" class="desc">臨海綠化，逾130萬呎綠化空間，景觀極佳。</text>
+</svg>

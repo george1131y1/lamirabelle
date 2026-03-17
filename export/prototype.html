@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>海瑅灣 La Mirabelle | 投資分析報告</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang HK', 'Microsoft JhengHei', sans-serif;
+            line-height: 1.6;
+            color: #1F2937;
+            background: #FFFFFF;
+        }
+        
+        /* ===== 設計系統變數 ===== */
+        :root {
+            --navy: #0A2540;
+            --navy-light: #1A3A5C;
+            --gold: #D4A853;
+            --gold-light: #E8C87A;
+            --cream: #F9F7F4;
+            --gray-100: #F3F4F6;
+            --gray-500: #6B7280;
+            --gray-700: #374151;
+            --white: #FFFFFF;
+        }
+        
+        /* ===== HERO 區域 ===== */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(212,168,83,0.1)" stroke-width="0.5"/></svg>');
+            background-size: 200px;
+            opacity: 0.5;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 72px;
+            font-weight: 300;
+            letter-spacing: 0.3em;
+            margin-bottom: 16px;
+        }
+        
+        .hero-subtitle {
+            font-size: 24px;
+            letter-spacing: 0.5em;
+            color: var(--gold);
+            margin-bottom: 48px;
+        }
+        
+        .hero-tag {
+            display: inline-block;
+            padding: 12px 32px;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 100px;
+            font-size: 14px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+        
+        /* ===== 核心價值區域 ===== */
+        .section {
+            padding: 120px 80px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        
+        .section-label {
+            font-size: 12px;
+            letter-spacing: 0.3em;
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        
+        .section-title {
+            font-size: 40px;
+            font-weight: 600;
+            color: var(--navy);
+            line-height: 1.3;
+        }
+        
+        /* 三欄卡片 */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+        
+        .card {
+            background: var(--white);
+            border: 1px solid #E5E7EB;
+            border-radius: 16px;
+            padding: 40px;
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transform: translateY(-4px);
+        }
+        
+        .card-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+        
+        .card-icon.navy {
+            background: rgba(10, 37, 64, 0.1);
+            color: var(--navy);
+        }
+        
+        .card-icon.gold {
+            background: rgba(212, 168, 83, 0.1);
+            color: var(--gold);
+        }
+        
+        .card h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--navy);
+        }
+        
+        .card-subtitle {
+            font-size: 14px;
+            color: var(--gray-500);
+            font-style: italic;
+            margin-bottom: 24px;
+        }
+        
+        .card-list {
+            list-style: none;
+        }
+        
+        .card-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #F3F4F6;
+            font-size: 15px;
+            color: var(--gray-700);
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .card-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 6px;
+            background: var(--gold);
+            border-radius: 50%;
+        }
+        
+        /* ===== 深色數據區域 ===== */
+        .dark-section {
+            background: var(--navy);
+            color: var(--white);
+            padding: 120px 80px;
+        }
+        
+        .dark-section .section-title {
+            color: var(--white);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px;
+            margin-top: 64px;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 64px;
+            font-weight: 300;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+        
+        .stat-label {
+            font-size: 12px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.5);
+            line-height: 1.6;
+        }
+        
+        /* ===== 圖表區域 ===== */
+        .chart-section {
+            background: var(--cream);
+            padding: 80px;
+        }
+        
+        .chart-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+        }
+        
+        .chart-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        
+        /* SVG 圖表樣式 */
+        .svg-chart {
+            width: 100%;
+            height: auto;
+        }
+        
+        /* ===== 價格區域 ===== */
+        .price-section {
+            background: var(--cream);
+            padding: 120px 80px;
+        }
+        
+        .price-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 64px;
+        }
+        
+        .price-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 40px 32px;
+            text-align: center;
+            border: 1px solid #E5E7EB;
+        }
+        
+        .price-card.featured {
+            background: var(--navy);
+            color: var(--white);
+            border-color: var(--navy);
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(10, 37, 64, 0.3);
+        }
+        
+        .price-label {
+            font-size: 11px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gray-500);
+            margin-bottom: 16px;
+        }
+        
+        .price-card.featured .price-label {
+            color: var(--gold);
+        }
+        
+        .price-type {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+        
+        .price-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
+        
+        .price-card.featured .price-value {
+            color: var(--white);
+        }
+        
+        .price-psf {
+            font-size: 14px;
+            color: var(--gray-500);
+        }
+        
+        .price-card.featured .price-psf {
+            color: rgba(255,255,255,0.6);
+        }
+        
+        /* ===== 優缺點區域 ===== */
+        .pros-cons-section {
+            padding: 120px 80px;
+        }
+        
+        .pros-cons-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+        }
+        
+        .pros-card {
+            background: #ECFDF5;
+            border: 1px solid #A7F3D0;
+            border-radius: 16px;
+            padding: 40px;
+        }
+        
+        .cons-card {
+            background: #FDF2F8;
+            border: 1px solid #FBCFE8;
+            border-radius: 16px;
+            padding: 40px;
+        }
+        
+        .pros-cons-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+        
+        .pros-cons-header h3 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .pros-card h3 { color: #059669; }
+        .cons-card h3 { color: #DC2626; }
+        
+        .pros-cons-item {
+            margin-bottom: 24px;
+        }
+        
+        .pros-cons-item h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--gray-700);
+        }
+        
+        .pros-cons-item p {
+            font-size: 14px;
+            color: var(--gray-500);
+            line-height: 1.6;
+        }
+        
+        /* ===== CTA 區域 ===== */
+        .cta-section {
+            background: var(--navy);
+            color: var(--white);
+            padding: 120px 80px;
+            text-align: center;
+        }
+        
+        .cta-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            max-width: 800px;
+            margin: 64px auto 0;
+        }
+        
+        .cta-card {
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 16px;
+            padding: 40px 32px;
+        }
+        
+        .cta-card.highlight {
+            background: var(--gold);
+            color: var(--navy);
+            border-color: var(--gold);
+        }
+        
+        .cta-label {
+            font-size: 12px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            opacity: 0.7;
+        }
+        
+        .cta-price {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        
+        .cta-desc {
+            font-size: 14px;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+        
+        /* ===== 免責聲明 ===== */
+        .footer {
+            background: var(--navy);
+            color: rgba(255,255,255,0.3);
+            padding: 40px 80px;
+            text-align: center;
+            font-size: 11px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        
+        /* ===== 響應式 ===== */
+        @media (max-width: 1024px) {
+            .section { padding: 80px 40px; }
+            .cards-grid { grid-template-columns: 1fr; }
+            .chart-grid { grid-template-columns: 1fr; }
+            .price-grid { grid-template-columns: 1fr; }
+            .pros-cons-grid { grid-template-columns: 1fr; }
+            .cta-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 48px; }
+            .stats-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>海 堤 灣 I</h1>
+            <p class="hero-subtitle">LA MIRABELLE I</p>
+            <div class="hero-tag">投資與置業分析報告</div>
+        </div>
+    </section>
+
+    <!-- 核心價值 -->
+    <section class="section">
+        <div class="section-header">
+            <p class="section-label">Core Values</p>
+            <h2 class="section-title">掌握海堤灣核心價值</h2>
+        </div>
+        
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-icon navy">🏢</div>
+                <h3>地標屬性</h3>
+                <p class="card-subtitle">(The Asset)</p>
+                <ul class="card-list">
+                    <li>5大星級發展商聯手 (信和、嘉里等)</li>
+                    <li>康城站壓軸臨海期數</li>
+                    <li>直達港島東無遮擋海景</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <div class="card-icon gold">📈</div>
+                <h3>價格定位</h3>
+                <p class="card-subtitle">(The Value)</p>
+                <ul class="card-list">
+                    <li>預測呎價 $17,000</li>
+                    <li>較康城二手溢價約 10%</li>
+                    <li>相比啟德或黃竹坑具備 15%-90% 折讓空間</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <div class="card-icon navy">🎯</div>
+                <h3>最終建議</h3>
+                <p class="card-subtitle">(The Action)</p>
+                <ul class="card-list">
+                    <li>極度適合「臨海自住客」與「鐵路通勤族」</li>
+                    <li>建議密切關注首批價單</li>
+                    <li>若呎價低於 $16,000 即為黃金進場點</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 數據統計 -->
+    <section class="dark-section">
+        <div class="section-header">
+            <h2 class="section-title">壓軸臨海地標的資產規模與時程</h2>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">2,550</div>
+                <div class="stat-label">Total Units<br/>伙數規模</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">5</div>
+                <div class="stat-label">Top Developers<br/>巨頭聯手</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">2027</div>
+                <div class="stat-label">Completion<br/>預計入伙</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 圖表區域 -->
+    <section class="chart-section">
+        <div class="chart-grid">
+            <!-- 戶型分佈圖 -->
+            <div class="chart-card">
+                <svg class="svg-chart" viewBox="0 0 400 320">
+                    <defs>
+                        <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#1A3A5C"/>
+                            <stop offset="100%" stop-color="#3B82F6"/>
+                        </linearGradient>
+                    </defs>
+                    
+                    <text x="200" y="25" text-anchor="middle" font-size="16" font-weight="700" fill="#1F2937">鎖定換屋族群的戶型與景觀分佈</text>
+                    
+                    <g transform="translate(130, 165)">
+                        <path d="M 0,-85 A 85,85 0 1,1 -58.7,61.5 L -38,39.7 A 55,55 0 1,0 0,-55 Z" fill="#0A2540" stroke="#FFFFFF" stroke-width="2"/>
+                        <path d="M -58.7,61.5 A 85,85 0 0,1 -79.3,-27.5 L -51.3,-17.8 A 55,55 0 0,0 -38,39.7 Z" fill="#D4A853" stroke="#FFFFFF" stroke-width="2"/>
+                        <path d="M -79.3,-27.5 A 85,85 0 0,1 -27.5,-79.3 L -17.8,-51.3 A 55,55 0 0,0 -51.3,-17.8 Z" fill="#1A3D67" stroke="#FFFFFF" stroke-width="2"/>
+                        <path d="M -27.5,-79.3 A 85,85 0 0,1 0,-85 L 0,-55 A 55,55 0 0,0 -17.8,-51.3 Z" fill="#E8C87A" stroke="#FFFFFF" stroke-width="2"/>
+                        
+                        <text x="0" y="-5" text-anchor="middle" font-size="24" font-weight="700" fill="#1F2937">2,550</text>
+                        <text x="0" y="15" text-anchor="middle" font-size="10" fill="#6B7280">總伙數</text>
+                    </g>
+                    
+                    <line x1="195" y1="165" x2="240" y2="165" stroke="#9CA3AF" stroke-width="1"/>
+                    <text x="248" y="160" font-size="12" font-weight="500" fill="#374151">2房</text>
+                    <text x="248" y="175" font-size="10" fill="#6B7280">47%, 1200伙</text>
+                    
+                    <line x1="75" y1="220" x2="40" y2="245" stroke="#9CA3AF" stroke-width="1"/>
+                    <text x="10" y="255" font-size="12" font-weight="500" fill="#374151">3房</text>
+                    <text x="10" y="268" font-size="10" fill="#6B7280">27%, 700伙</text>
+                    
+                    <rect x="260" y="100" width="125" height="75" rx="4" fill="#FFFFFF" stroke="#D4A853" stroke-width="1.5"/>
+                    <text x="270" y="122" font-size="11" fill="#374151">高度集中於2至3房</text>
+                    <text x="270" y="138" font-size="11" fill="#374151">(共佔74%)，確立本期</text>
+                    <text x="270" y="154" font-size="11" fill="#374151">主打「家庭客」與「換</text>
+                    <text x="270" y="170" font-size="11" fill="#374151">樓客」的穩健居住屬性。</text>
+                    
+                    <text x="322" y="220" text-anchor="middle" font-size="24" font-weight="700" fill="#1F2937">&gt; 60%</text>
+                    <rect x="267" y="230" width="110" height="12" rx="6" fill="#E5E7EB"/>
+                    <rect x="267" y="230" width="75" height="12" rx="6" fill="url(#blueGrad)"/>
+                    <rect x="337" y="225" width="2" height="22" fill="#0A2540"/>
+                    <text x="322" y="270" text-anchor="middle" font-size="11" fill="#374151">逾60%單位享有將軍澳海灣及</text>
+                    <text x="322" y="285" text-anchor="middle" font-size="11" fill="#374151">港島東開揚景致。</text>
+                </svg>
+            </div>
+
+            <!-- 歷史價格圖 -->
+            <div class="chart-card">
+                <svg class="svg-chart" viewBox="0 0 560 320">
+                    <rect width="560" height="320" fill="#F9F7F4" rx="12"/>
+                    
+                    <text x="280" y="25" text-anchor="middle" font-size="16" font-weight="700" fill="#1F2937">日出康城歷史價格演進與海瑅灣的溢價支撐</text>
+                    
+                    <rect x="45" y="45" width="220" height="75" rx="6" fill="#FFFFFF" stroke="#0A2540" stroke-width="1.5"/>
+                    <text x="55" y="65" font-size="11" fill="#374151">從首期至今經歷巨大蛻變。</text>
+                    <text x="55" y="81" font-size="11" fill="#374151">第13期作為康城站臨海最後</text>
+                    <text x="55" y="97" font-size="11" fill="#374151">一塊拼圖，其 $17,000 的預估</text>
+                    <text x="55" y="113" font-size="11" fill="#374151">準奠定了該區的價值天花板。</text>
+                    
+                    <g transform="translate(40, 130)">
+                        <line x1="0" y1="0" x2="400" y2="0" stroke="#E5E7EB" stroke-width="1"/>
+                        <line x1="0" y1="50" x2="400" y2="50" stroke="#E5E7EB" stroke-width="1"/>
+                        <line x1="0" y1="100" x2="400" y2="100" stroke="#E5E7EB" stroke-width="1"/>
+                        <line x1="0" y1="150" x2="400" y2="150" stroke="#E5E7EB" stroke-width="1"/>
+                        
+                        <text x="-10" y="5" text-anchor="end" font-size="10" fill="#6B7280">$18k</text>
+                        <text x="-10" y="55" text-anchor="end" font-size="10" fill="#6B7280">$16k</text>
+                        <text x="-10" y="105" text-anchor="end" font-size="10" fill="#6B7280">$14k</text>
+                        <text x="-10" y="155" text-anchor="end" font-size="10" fill="#6B7280">$12k</text>
+                        
+                        <rect x="20" y="150" width="45" height="0" fill="#9CA3AF"/>
+                        <text x="42" y="140" text-anchor="middle" font-size="12" font-weight="600" fill="#374151">$12k</text>
+                        <text x="42" y="175" text-anchor="middle" font-size="11" font-weight="500" fill="#374151">1期</text>
+                        <text x="42" y="190" text-anchor="middle" font-size="10" fill="#6B7280">首都</text>
+                        
+                        <rect x="85" y="125" width="45" height="25" fill="#9CA3AF"/>
+                        <text x="107" y="115" text-anchor="middle" font-size="12" font-weight="600" fill="#374151">$13k</text>
+                        <text x="107" y="175" text-anchor="middle" font-size="11" font-weight="500" fill="#374151">3期</text>
+                        <text x="107" y="190" text-anchor="middle" font-size="10" fill="#6B7280">緻藍天</text>
+                        
+                        <rect x="150" y="100" width="45" height="50" fill="#60A5FA"/>
+                        <text x="172" y="90" text-anchor="middle" font-size="12" font-weight="600" fill="#374151">$14k</text>
+                        <text x="172" y="175" text-anchor="middle" font-size="11" font-weight="500" fill="#374151">4期</text>
+                        <text x="172" y="190" text-anchor="middle" font-size="10" fill="#6B7280">晉海</text>
+                        
+                        <rect x="215" y="75" width="45" height="75" fill="#60A5FA"/>
+                        <text x="237" y="65" text-anchor="middle" font-size="12" font-weight="600" fill="#374151">$15k</text>
+                        <text x="237" y="175" text-anchor="middle" font-size="11" font-weight="500" fill="#374151">6期</text>
+                        <text x="237" y="190" text-anchor="middle" font-size="10" fill="#6B7280">LP6</text>
+                        
+                        <rect x="280" y="37.5" width="45" height="112.5" fill="#0A2540"/>
+                        <text x="302" y="27" text-anchor="middle" font-size="12" font-weight="600" fill="#374151">$16.5k</text>
+                        <text x="302" y="175" text-anchor="middle" font-size="11" font-weight="500" fill="#374151">9期</text>
+                        <text x="302" y="190" text-anchor="middle" font-size="10" fill="#6B7280">MARINI</text>
+                        
+                        <rect x="345" y="25" width="45" height="125" rx="4" fill="#D4A853" stroke="#B8941F" stroke-width="2"/>
+                        <text x="367" y="15" text-anchor="middle" font-size="18" font-weight="700" fill="#0A2540">$17k</text>
+                        <text x="367" y="175" text-anchor="middle" font-size="11" font-weight="500" fill="#374151">13期</text>
+                        <text x="367" y="190" text-anchor="middle" font-size="10" fill="#6B7280">海瑅灣</text>
+                        
+                        <polyline points="42,150 107,125 172,100 237,75 302,37.5 367,25" fill="none" stroke="#D4A853" stroke-width="3"/>
+                        
+                        <line x1="412" y1="25" x2="440" y2="25" stroke="#0A2540" stroke-width="1.5"/>
+                        <text x="445" y="20" font-size="18" font-weight="700" fill="#0A2540">$17,000</text>
+                        <text x="445" y="38" font-size="10" fill="#6B7280">(預測價)</text>
+                        <polygon points="435,20 440,35 430,35" fill="#D4A853"/>
+                    </g>
+                    
+                    <text x="280" y="305" text-anchor="middle" font-size="10" fill="#6B7280">(註：數據為近期二手成交參考)</text>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- 價格區間 -->
+    <section class="price-section">
+        <div class="section-header">
+            <h2 class="section-title">預期進場門檻與各戶型定價區間</h2>
+            <p style="color: var(--gray-500); max-width: 600px; margin: 24px auto 0;">
+                康城近期二手成交呎價約 $14,000-$15,500。預計海瑅灣將憑藉「壓軸期數」與「無遮擋海景」優勢，整體開價將貼近市價或略帶 5-10% 溢價。
+            </p>
+        </div>
+        
+        <div class="price-grid">
+            <div class="price-card">
+                <div class="price-label">Entry Threshold</div>
+                <h3 class="price-type">1房 (~350呎)</h3>
+                <div class="price-value">$490萬 - $525萬</div>
+                <div class="price-psf">預計呎價 $14.0k - $15.0k</div>
+            </div>
+            
+            <div class="price-card featured">
+                <div class="price-label">主力戶型</div>
+                <h3 class="price-type">2房 (~500呎)</h3>
+                <div class="price-value">$725萬 - $775萬</div>
+                <div class="price-psf">預計呎價 $14.5k - $15.5k</div>
+            </div>
+            
+            <div class="price-card">
+                <div class="price-label">Entry Threshold</div>
+                <h3 class="price-type">3房 (~750呎)</h3>
+                <div class="price-value">$1,125萬 - $1,200萬</div>
+                <div class="price-psf">預計呎價 $15.0k - $16.0k</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 優缺點 -->
+    <section class="pros-cons-section">
+        <div class="pros-cons-grid">
+            <div class="pros-card">
+                <div class="pros-cons-header">
+                    <span style="font-size: 24px;">✓</span>
+                    <h3>看漲護城河 (Pros)</h3>
+                </div>
+                
+                <div class="pros-cons-item">
+                    <h4>絕版地段</h4>
+                    <p>日出康城壓軸臨海，無遮擋景觀具稀缺性。</p>
+                </div>
+                
+                <div class="pros-cons-item">
+                    <h4>星級陣容</h4>
+                    <p>5大發展商聯手，建築質素與交付能力極高。</p>
+                </div>
+                
+                <div class="pros-cons-item">
+                    <h4>成熟配套</h4>
+                    <p>The LOHAS 大型商場與完善綠化，即買即享受。</p>
+                </div>
+            </div>
+            
+            <div class="cons-card">
+                <div class="pros-cons-header">
+                    <span style="font-size: 24px;">✕</span>
+                    <h3>價格阻力位 (Cons)</h3>
+                </div>
+                
+                <div class="pros-cons-item">
+                    <h4>通勤瓶頸</h4>
+                    <p>康城站班次先天受限，繁忙時間高密度人口導致擠迫。</p>
+                </div>
+                
+                <div class="pros-cons-item">
+                    <h4>資金鎖定</h4>
+                    <p>約 17 個月的樓花期，需承擔期間宏觀市況與息口變數。</p>
+                </div>
+                
+                <div class="pros-cons-item">
+                    <h4>微觀滋擾</h4>
+                    <p>周邊仍有零星工地，入伙初期需面對噪音與塵埃。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <h2 class="section-title" style="color: white;">開價黃金定律 (Action Trigger)</h2>
+        
+        <div class="cta-grid">
+            <div class="cta-card">
+                <div class="cta-label">若首批定價約</div>
+                <div class="cta-price">$17,000/呎</div>
+                <p class="cta-desc">符合預期 (貼市價)，自住買家可按自身需求入市。</p>
+            </div>
+            
+            <div class="cta-card highlight">
+                <div class="cta-label">強烈信號</div>
+                <div style="font-size: 14px; opacity: 0.7; margin-bottom: 8px;">若首批定價</div>
+                <div class="cta-price">&lt; $16,000/呎</div>
+                <p class="cta-desc" style="color: var(--navy); font-weight: 500;">強烈建議進場！海瑅灣將成為當前市況下極具防守力與性價比的優質資產。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        免責聲明：本報告僅供參考，不構成投資建議。所有資訊以發展商最新公佈為準。
+    </footer>
+</body>
+</html>
