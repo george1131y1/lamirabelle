@@ -64,7 +64,7 @@ export default function App() {
             alt="海瑅灣 La Mirabelle"
             className="w-full h-full object-cover scale-105"
           />
-          <div className="absolute inset-0 bg-black/30 backdrop-blur-[2px]" />
+          <div className="absolute inset-0 bg-black/30" />
         </div>
 
         <div className="relative z-10 text-center text-white px-4">
@@ -113,8 +113,8 @@ export default function App() {
             icon={TrendingUp}
             color="gold"
             items={[
-              "預測呎價 $17,000",
-              "較康城二手溢價約 10%",
+              "預測呎價 $16,000 - $17,000",
+              "較康城二手溢價約 5-10%",
               "相比啟德或黃竹坑具備 15%-90% 折讓空間"
             ]}
           />
@@ -201,9 +201,9 @@ export default function App() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { type: "1房 (~350呎)", price: "$490萬 - $525萬", psf: "$14.0k - $15.0k" },
-              { type: "2房 (~500呎)", price: "$725萬 - $775萬", psf: "$14.5k - $15.5k", highlight: true },
-              { type: "3房 (~750呎)", price: "$1,125萬 - $1,200萬", psf: "$15.0k - $16.0k" },
+              { type: "1房 (~350呎)", price: "$560萬 - $595萬", psf: "$16.0k - $17.0k" },
+              { type: "2房 (~500呎)", price: "$800萬 - $850萬", psf: "$16.0k - $17.0k", highlight: true },
+              { type: "3房 (~750呎)", price: "$1,200萬 - $1,275萬", psf: "$16.0k - $17.0k" },
             ].map((item, i) => (
               <div key={i} className={`p-8 rounded-2xl border ${item.highlight ? 'bg-luxury-navy text-white border-luxury-navy shadow-2xl scale-105' : 'bg-white border-gray-200'}`}>
                 <div className={`text-xs uppercase tracking-widest mb-4 ${item.highlight ? 'text-luxury-gold' : 'text-gray-400'}`}>Entry Threshold</div>

@@ -93,30 +93,48 @@ export const UnitMixChart = () => {
   );
 };
 
-// SVG 海景指示器 (Figma 設計) - 移除圓角框，只顯示文字
+// SVG 海景指示器 - 圓形船照版本
 export const SeaViewIndicator = () => {
   return (
     <div className="flex flex-col items-center w-full">
-      <svg viewBox="0 0 800 400" className="w-full h-auto max-h-[350px]" preserveAspectRatio="xMidYMid meet">
+      <svg viewBox="0 0 800 500" className="w-full h-auto max-h-[450px]" preserveAspectRatio="xMidYMid meet">
         {/* 背景 */}
-        <rect width="800" height="400" rx="24" fill={COLORS.cream}/>
+        <rect width="800" height="500" rx="24" fill={COLORS.cream}/>
 
-        {/* 移除圓角框，只顯示文字說明 */}
-        <text x="400" y="100" textAnchor="middle" fill="#374151" fontSize="24" fontFamily="system-ui, -apple-system, sans-serif">
+        {/* 標題 */}
+        <text x="400" y="60" textAnchor="middle" fill="#374151" fontSize="24" fontFamily="system-ui, -apple-system, sans-serif">
           逾60%單位享有將軍澳海灣及港島東開揚景致
         </text>
 
-        {/* >60% 大數字 */}
-        <text x="400" y="220" textAnchor="middle" fill="#1F2937" fontSize="100" fontWeight="700" fontFamily="SegoeUI-Bold, 'Segoe UI', system-ui, sans-serif">{'>'} 60%</text>
+        {/* 圓形船照 */}
+        <defs>
+          <clipPath id="circleView">
+            <circle cx="400" cy="230" r="100"/>
+          </clipPath>
+        </defs>
+
+        {/* 圓形邊框 */}
+        <circle cx="400" cy="230" r="105" fill="none" stroke={COLORS.gold} strokeWidth="4"/>
+
+        {/* 船照圖片（使用 pattern） */}
+        <defs>
+          <pattern id="seaImage" patternUnits="userSpaceOnUse" width="534" height="534">
+            <image href="./images/seaview_circle.png" x="-67" y="-67" width="534" height="534"/>
+          </pattern>
+        </defs>
+        <circle cx="400" cy="230" r="100" fill="url(#seaImage)"/>
+
+        {/* >60% 大數字 - 移到下方 */}
+        <text x="400" y="400" textAnchor="middle" fill="#1F2937" fontSize="72" fontWeight="700" fontFamily="SegoeUI-Bold, 'Segoe UI', system-ui, sans-serif">{'>'} 60%</text>
 
         {/* 進度條背景 */}
-        <rect x="150" y="280" width="500" height="30" rx="15" fill="#E5E7EB"/>
+        <rect x="150" y="430" width="500" height="20" rx="10" fill="#E5E7EB"/>
 
         {/* 進度條填充 (60%) */}
-        <rect x="150" y="280" width="300" height="30" rx="15" fill="url(#blueGrad)"/>
+        <rect x="150" y="430" width="300" height="20" rx="10" fill="url(#blueGrad)"/>
 
         {/* 60% 標記線 */}
-        <rect x="445" y="265" width="4" height="60" fill={COLORS.navy}/>
+        <rect x="445" y="418" width="4" height="44" fill={COLORS.navy}/>
 
         {/* 漸層定義 */}
         <defs>
@@ -191,9 +209,9 @@ export const HistoricalPriceChart = () => {
         <text x="620" y="460" textAnchor="middle" fill="#374151" fontSize="16" fontWeight="500">9期</text>
         <text x="620" y="480" textAnchor="middle" fill="#6B7280" fontSize="14">MARINI</text>
 
-        {/* 13期 海瑅灣 - $17k (目標 - Navy) */}
-        <text x="750" y="235" textAnchor="middle" fill={COLORS.navy} fontSize="20" fontWeight="700">$17k</text>
-        <rect x="720" y="250" width="70" height="185" fill={COLORS.navy} rx="4"/>
+        {/* 13期 海瑅灣 - $16k-$17k (目標 - Navy) */}
+        <text x="750" y="225" textAnchor="middle" fill={COLORS.navy} fontSize="18" fontWeight="700">$16k-$17k</text>
+        <rect x="720" y="245" width="70" height="190" fill={COLORS.navy} rx="4"/>
         <text x="755" y="460" textAnchor="middle" fill="#374151" fontSize="16" fontWeight="500">13期</text>
         <text x="755" y="480" textAnchor="middle" fill="#6B7280" fontSize="14">海瑅灣</text>
 
