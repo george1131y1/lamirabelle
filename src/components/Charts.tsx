@@ -12,79 +12,80 @@ const COLORS = {
   cream: '#F9F7F4',
 };
 
-// SVG 單位戶型分佈圖 - 置中版甜甜圈圖
+// SVG 單位戶型分佈圖 - 緊湊版，適合手機
 export const UnitMixChart = () => {
   return (
     <div className="flex flex-col items-center w-full">
-      <svg viewBox="0 0 800 600" className="w-full h-auto max-h-[500px]" preserveAspectRatio="xMidYMid meet">
+      <svg viewBox="0 0 400 350" className="w-full h-auto max-h-[350px]" preserveAspectRatio="xMidYMid meet">
         {/* 背景 */}
-        <rect width="800" height="600" rx="24" fill={COLORS.cream}/>
+        <rect width="400" height="350" rx="16" fill={COLORS.cream}/>
 
-        {/* 甜甜圈圖 - 置中 (cx=400, cy=300) */}
-        <g transform="translate(400, 300)">
-          {/* 2房 47% - 金色 (右側大區塊) */}
+        {/* 甜甜圈圖 - 放大置中 (cx=200, cy=175) */}
+        <g transform="translate(200, 175)">
+          {/* 2房 47% - 金色 */}
           <path 
-            d="M 0,-120 A 120,120 0 1,1 -72.5,96.9 L -48.3,64.6 A 80,80 0 1,0 0,-80 Z" 
+            d="M 0,-100 A 100,100 0 1,1 -60.4,80.8 L -40.3,53.9 A 66.7,66.7 0 1,0 0,-66.7 Z" 
             fill={COLORS.gold} 
             stroke={COLORS.white} 
-            strokeWidth="3"
+            strokeWidth="2"
           />
           
-          {/* 3房 27% - 深藍 (左下) */}
+          {/* 3房 27% - 深藍 */}
           <path 
-            d="M -72.5,96.9 A 120,120 0 0,1 -109.8,-52.6 L -73.2,-35.1 A 80,80 0 0,0 -48.3,64.6 Z" 
+            d="M -60.4,80.8 A 100,100 0 0,1 -91.5,-43.8 L -61,-29.2 A 66.7,66.7 0 0,0 -40.3,53.9 Z" 
             fill={COLORS.navy} 
             stroke={COLORS.white} 
-            strokeWidth="3"
+            strokeWidth="2"
           />
           
-          {/* 1房 16% - 金色 (右上) */}
+          {/* 1房 16% - 金色 */}
           <path 
-            d="M 102.6,-67.1 A 120,120 0 0,1 0,-120 L 0,-80 A 80,80 0 0,0 68.4,-44.7 Z" 
+            d="M 85.5,-55.9 A 100,100 0 0,1 0,-100 L 0,-66.7 A 66.7,66.7 0 0,0 57,-37.3 Z" 
             fill={COLORS.gold} 
             stroke={COLORS.white} 
-            strokeWidth="3"
+            strokeWidth="2"
           />
           
-          {/* 4房 10% - 深藍 (正上方) */}
+          {/* 4房 10% - 深藍 */}
           <path 
-            d="M -109.8,-52.6 A 120,120 0 0,1 102.6,-67.1 L 68.4,-44.7 A 80,80 0 0,0 -73.2,-35.1 Z" 
+            d="M -91.5,-43.8 A 100,100 0 0,1 85.5,-55.9 L 57,-37.3 A 66.7,66.7 0 0,0 -61,-29.2 Z" 
             fill={COLORS.navyLight} 
             stroke={COLORS.white} 
-            strokeWidth="3"
+            strokeWidth="2"
           />
 
           {/* 中心圓 */}
-          <circle cx="0" cy="0" r="80" fill={COLORS.cream}/>
+          <circle cx="0" cy="0" r="66.7" fill={COLORS.cream}/>
           
           {/* 總伙數 */}
-          <text x="0" y="-5" textAnchor="middle" fill="#1F2937" fontSize="48" fontWeight="700" fontFamily="SegoeUI-Bold, 'Segoe UI', system-ui, sans-serif">2,550</text>
-          <text x="0" y="25" textAnchor="middle" fill="#6B7280" fontSize="18" fontFamily="system-ui, -apple-system, sans-serif" fontWeight="300">總伙數</text>
+          <text x="0" y="-3" textAnchor="middle" fill="#1F2937" fontSize="36" fontWeight="700" fontFamily="SegoeUI-Bold, 'Segoe UI', system-ui, sans-serif">2,550</text>
+          <text x="0" y="20" textAnchor="middle" fill="#6B7280" fontSize="14" fontFamily="system-ui, -apple-system, sans-serif" fontWeight="300">總伙數</text>
         </g>
 
-        {/* 2房標籤 - 右側 */}
-        <line x1="520" y1="300" x2="620" y2="300" stroke="#9CA3AF" strokeWidth="2"/>
-        <circle cx="520" cy="300" r="3" fill="#9CA3AF"/>
-        <text x="630" y="292" fill="#374151" fontSize="28" fontFamily="Roboto-Medium, Roboto" fontWeight="500">2房</text>
-        <text x="630" y="320" fill="#6B7280" fontSize="22" fontFamily="SegoeUI, 'Segoe UI'">47%, 1200伙</text>
+        {/* 標籤 - 更緊湊 */}
+        {/* 2房 - 右側 */}
+        <line x1="275" y1="175" x2="320" y2="175" stroke="#9CA3AF" strokeWidth="1.5"/>
+        <circle cx="275" cy="175" r="2" fill="#9CA3AF"/>
+        <text x="325" y="170" fill="#374151" fontSize="16" fontWeight="600">2房</text>
+        <text x="325" y="188" fill="#6B7280" fontSize="12">47%, 1200伙</text>
 
-        {/* 3房標籤 - 左下 */}
-        <line x1="290" y1="400" x2="220" y2="450" stroke="#9CA3AF" strokeWidth="2"/>
-        <circle cx="290" cy="400" r="3" fill="#9CA3AF"/>
-        <text x="160" y="470" fill="#374151" fontSize="28" fontFamily="Roboto-Medium, Roboto" fontWeight="500">3房</text>
-        <text x="160" y="498" fill="#6B7280" fontSize="22" fontFamily="SegoeUI, 'Segoe UI'">27%, 700伙</text>
+        {/* 3房 - 左下 */}
+        <line x1="125" y1="240" x2="80" y2="275" stroke="#9CA3AF" strokeWidth="1.5"/>
+        <circle cx="125" cy="240" r="2" fill="#9CA3AF"/>
+        <text x="20" y="280" fill="#374151" fontSize="16" fontWeight="600">3房</text>
+        <text x="20" y="295" fill="#6B7280" fontSize="12">27%, 700伙</text>
 
-        {/* 1房標籤 - 右上 */}
-        <line x1="470" y1="210" x2="550" y2="160" stroke="#9CA3AF" strokeWidth="2"/>
-        <circle cx="470" cy="210" r="3" fill="#9CA3AF"/>
-        <text x="560" y="155" fill="#374151" fontSize="28" fontFamily="Roboto-Medium, Roboto" fontWeight="500">1房</text>
-        <text x="560" y="183" fill="#6B7280" fontSize="22" fontFamily="SegoeUI, 'Segoe UI'">16%, 400伙</text>
+        {/* 1房 - 右上 */}
+        <line x1="250" y1="120" x2="290" y2="90" stroke="#9CA3AF" strokeWidth="1.5"/>
+        <circle cx="250" cy="120" r="2" fill="#9CA3AF"/>
+        <text x="295" y="85" fill="#374151" fontSize="16" fontWeight="600">1房</text>
+        <text x="295" y="100" fill="#6B7280" fontSize="12">16%, 400伙</text>
 
-        {/* 4房標籤 - 正上方 (往上移避免重叠) */}
-        <line x1="400" y1="180" x2="400" y2="100" stroke="#9CA3AF" strokeWidth="2"/>
-        <circle cx="400" cy="180" r="3" fill="#9CA3AF"/>
-        <text x="400" y="85" textAnchor="middle" fill="#374151" fontSize="28" fontFamily="Roboto-Medium, Roboto" fontWeight="500">4房</text>
-        <text x="400" y="60" textAnchor="middle" fill="#6B7280" fontSize="22" fontFamily="SegoeUI, 'Segoe UI'">10%, 250伙</text>
+        {/* 4房 - 正上方 */}
+        <line x1="200" y1="75" x2="200" y2="35" stroke="#9CA3AF" strokeWidth="1.5"/>
+        <circle cx="200" cy="75" r="2" fill="#9CA3AF"/>
+        <text x="200" y="28" textAnchor="middle" fill="#374151" fontSize="16" fontWeight="600">4房</text>
+        <text x="200" y="15" textAnchor="middle" fill="#6B7280" fontSize="12">10%, 250伙</text>
       </svg>
     </div>
   );
@@ -94,26 +95,31 @@ export const UnitMixChart = () => {
 export const SeaViewIndicator = () => {
   return (
     <div className="flex flex-col items-center w-full">
-      <svg viewBox="0 0 800 400" className="w-full h-auto max-h-[350px]" preserveAspectRatio="xMidYMid meet">
+      <svg viewBox="0 0 400 280" className="w-full h-auto max-h-[280px]" preserveAspectRatio="xMidYMid meet">
         {/* 背景 */}
-        <rect width="800" height="400" rx="24" fill={COLORS.cream}/>
+        <rect width="400" height="280" rx="16" fill={COLORS.cream}/>
 
-        {/* 文字說明 */}
-        <text x="400" y="100" textAnchor="middle" fill="#374151" fontSize="24" fontFamily="system-ui, -apple-system, sans-serif">
+        {/* 標題 - 更緊湊 */}
+        <text x="200" y="45" textAnchor="middle" fill="#374151" fontSize="14" fontFamily="system-ui, -apple-system, sans-serif">
           逾60%單位享有將軍澳海灣及港島東開揚景致
         </text>
 
-        {/* >60% 大數字 */}
-        <text x="400" y="220" textAnchor="middle" fill="#1F2937" fontSize="100" fontWeight="700" fontFamily="SegoeUI-Bold, 'Segoe UI', system-ui, sans-serif">{'>'} 60%</text>
+        {/* >60% 大數字 - 放大 */}
+        <text x="200" y="140" textAnchor="middle" fill="#1F2937" fontSize="72" fontWeight="700" fontFamily="SegoeUI-Bold, 'Segoe UI', system-ui, sans-serif">{'>'} 60%</text>
 
         {/* 進度條背景 */}
-        <rect x="150" y="280" width="500" height="30" rx="15" fill="#E5E7EB"/>
+        <rect x="50" y="190" width="300" height="20" rx="10" fill="#E5E7EB"/>
 
         {/* 進度條填充 (60%) */}
-        <rect x="150" y="280" width="300" height="30" rx="15" fill="url(#blueGrad)"/>
+        <rect x="50" y="190" width="180" height="20" rx="10" fill="url(#blueGrad)"/>
 
         {/* 60% 標記線 */}
-        <rect x="445" y="265" width="4" height="60" fill={COLORS.navy}/>
+        <rect x="227" y="178" width="3" height="44" fill={COLORS.navy}/>
+
+        {/* 百分比標記 */}
+        <text x="50" y="235" fill="#6B7280" fontSize="11">0%</text>
+        <text x="230" y="235" textAnchor="middle" fill={COLORS.navy} fontSize="11" fontWeight="600">60%</text>
+        <text x="350" y="235" textAnchor="end" fill="#6B7280" fontSize="11">100%</text>
 
         {/* 漸層定義 */}
         <defs>

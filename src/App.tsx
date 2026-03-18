@@ -184,10 +184,10 @@ export default function App() {
           <h2 className="section-title">鎖定換屋族群的戶型與景觀分佈</h2>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
-          <div className="bg-[#F9F7F4] rounded-3xl p-6 md:p-8 min-h-[400px] flex items-center justify-center">
+          <div className="bg-[#F9F7F4] rounded-3xl p-4 md:p-6 min-h-[300px] md:min-h-[350px] flex items-center justify-center">
             <UnitMixChart />
           </div>
-          <div className="bg-[#F9F7F4] rounded-3xl p-6 md:p-8 min-h-[400px] flex items-center justify-center">
+          <div className="bg-[#F9F7F4] rounded-3xl p-4 md:p-6 min-h-[280px] md:min-h-[300px] flex items-center justify-center">
             <SeaViewIndicator />
           </div>
         </div>
