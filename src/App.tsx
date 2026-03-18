@@ -156,17 +156,20 @@ export default function App() {
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-square rounded-full border border-white/10 flex items-center justify-center p-12">
-                <div className="w-full h-full rounded-full border border-luxury-gold/30 flex items-center justify-center relative">
+              <div className="aspect-square rounded-full border border-white/10 flex items-center justify-center p-8">
+                <div className="w-full h-full rounded-full border border-luxury-gold/30 flex items-center justify-center relative overflow-hidden">
                   <motion.div
                     animate={{ rotate: 360 }}
                     transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                     className="absolute inset-0 border-t-2 border-luxury-gold rounded-full"
                   />
-                  <div className="text-center">
-                    <Waves className="mx-auto mb-4 text-luxury-gold" size={48} />
-                    <div className="text-2xl font-serif">Seamless Connection</div>
-                    <div className="text-xs text-white/40 uppercase tracking-widest mt-2">無縫連接</div>
+                  {/* 圓形船照 */}
+                  <div className="w-4/5 h-4/5 rounded-full overflow-hidden relative z-10">
+                    <img 
+                      src="./images/seaview_circle.png" 
+                      alt="海景"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
               </div>
